@@ -74,10 +74,10 @@ async def search(message: Message) -> Optional[Song]:
             media = reply.audio or reply.video or reply.document
             if not media:
                 return None
-            lel = await message.reply_text("`Trying To Download...`")
+            lel = await message.reply_text("`Tentando baixar...`")
             file = await reply.download(
                 progress=progress_bar,
-                progress_args=("Downloading...", lel, time.time()),
+                progress_args=("Baixando...", lel, time.time()),
             )
             await lel.delete()
             return Song(
@@ -139,7 +139,7 @@ async def progress_bar(current, total, ud_type, msg, start):
             "".join(["▰" for i in range(math.floor(percentage / 10))]),
             "".join(["▱" for i in range(10 - math.floor(percentage / 10))]),
         )
-        current_message = f"**Downloading...** `{round(percentage, 2)}%`\n`{progressbar}`\n**Done**: `{humanbytes(current)}` | **Total**: `{humanbytes(total)}`\n**Speed**: `{humanbytes(speed)}/s` | **ETA**: `{time_to_complete}`"
+        current_message = f"**Baixando...** `{round(percentage, 2)}%`\n`{progressbar}`\n**Baixado**: `{humanbytes(current)}` | **Total**: `{humanbytes(total)}`\n**Velocidade**: `{humanbytes(speed)}/s` | **Tempo**: `{time_to_complete}`"
         if msg:
             try:
                 await msg.edit(text=current_message)
