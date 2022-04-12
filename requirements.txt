@@ -3,9 +3,9 @@ pillow
 spotipy
 aiohttp
 aiofiles
-pyrogram
+pyrogram==1.4.12
 tgcrypto
 python-dotenv
-py-tgcalls==0.8.2
+py-tgcalls
 youtube-search-python
 git+https://github.com/asmsafone/downloader
