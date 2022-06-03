@@ -1,19 +1,13 @@
-FROM nikolaik/python-nodejs:python3.9-nodejs16
+FROM python:3.10
 
-# Updating Packages
-RUN apt update && apt upgrade -y
-RUN apt install git curl python3-pip ffmpeg -y
+WORKDIR /app
 
-# Copying Requirements
-COPY requirements.txt /requirements.txt
+COPY requirements.txt /app/
 
-# Installing Requirements
-RUN cd /
-RUN pip3 install --upgrade pip
-RUN pip3 install -U -r requirements.txt
-RUN mkdir /MusicPlayer
-WORKDIR /MusicPlayer
-COPY startup.sh /startup.sh
+RUN pip3 install -r requirements.txt
 
-# Running Music Player Bot
-CMD ["/bin/bash", "/startup.sh"]
+COPY . /app
+
+#set a default command
+
+CMD python3 -m Yukki
