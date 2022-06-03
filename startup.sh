@@ -1,5 +1,12 @@
 echo ">> FETCHING UPSTREAM..."
 git clone https://github.com/Jnrlima/JhonnyMusic /MusicPlayer
+apt install wget -y
+apt install git curl python3-pip ffmpeg -y
+pip3 install -U pip
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+npm install pm2@latest -g
+apt install build-essential
+apt install -y nodejs
 echo ">> INSTALLING REQUIREMENTS..."
 cd /MusicPlayer
 pip3 install -U -r requirements.txt
