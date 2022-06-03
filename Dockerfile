@@ -5,8 +5,8 @@ WORKDIR /app
 COPY requirements.txt /app/
 
 RUN pip3 install -r requirements.txt
-RUN apt install wget
-RUN apt install -y nodejs
+RUN pip3 install wget
+RUN pip3 install -y nodejs
 
 COPY . /app
 
