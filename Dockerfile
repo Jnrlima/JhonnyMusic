@@ -10,4 +10,4 @@ COPY . /app
 
 #set a default command
 
-CMD python3 -m Yukki
+CMD python3 -m main.py
