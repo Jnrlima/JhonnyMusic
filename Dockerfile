@@ -9,7 +9,6 @@ RUN pip3 install wget
 RUN pip3 install nodejs
 RUN pip3 install wget
 RUN pip3 install nodejs
-RUN pip3 install git curl python3-pip ffmpeg -y
 RUN pip3 install -U pip
 RUN curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 RUN pip3 install -y nodejs
