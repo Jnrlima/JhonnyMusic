@@ -5,12 +5,6 @@ WORKDIR /app
 COPY requirements.txt /app/
 
 RUN pip3 install -r requirements.txt
-RUN pip3 install wget
-RUN pip3 install nodejs
-RUN pip3 install wget
-RUN pip3 install nodejs
-RUN pip3 install -U pip
-RUN curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 RUN pip3 install -y nodejs
 RUN pip3 install build-essential
 RUN npm install pm2@latest -g
