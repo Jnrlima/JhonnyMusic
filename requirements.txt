@@ -1,5 +1,6 @@
 wget
 curl
+nodejs
 ffmpeg-python
 pytube
 pillow
