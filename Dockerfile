@@ -9,11 +9,11 @@ RUN pip3 install wget
 RUN pip3 install nodejs
 RUN pip3 install wget
 RUN pip3 install nodejs
-RUN apt install git curl python3-pip ffmpeg -y
-RUN apt install -U pip
+RUN pip3 install git curl python3-pip ffmpeg -y
+RUN pip3 install -U pip
 RUN curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-RUN apt install -y nodejs
-RUN apt install build-essential
+RUN pip3 install -y nodejs
+RUN pip3 install build-essential
 RUN npm install pm2@latest -g
 
 COPY . /app
