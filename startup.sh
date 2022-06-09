@@ -3,7 +3,7 @@ git clone https://github.com/Jnrlima/JhonnyMusic
 pip3 install -r requirements.txt
 echo ">> INSTALLING REQUIREMENTS..."
 cd /JhonnyMusic
-pip3 install nodejs
+apt-get install nodejs
 
 echo ">> STARTING MUSIC PLAYER USERBOT..."
 clear
