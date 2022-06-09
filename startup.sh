@@ -1,8 +1,8 @@
 echo ">> FETCHING UPSTREAM..."
-git clone https://github.com/Jnrlima/JhonnyMusic /MusicPlayer
+git clone https://github.com/Jnrlima/JhonnyMusic
 pip3 install -r requirements.txt
 echo ">> INSTALLING REQUIREMENTS..."
-cd /MusicPlayer
+cd /JhonnyMusic
 pip3 install -U -r requirements.txt
 pip3 install wget
 pip3 install nodejs
