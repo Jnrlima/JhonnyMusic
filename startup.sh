@@ -8,8 +8,6 @@ pprint "SUCCESS!\n" "cgreen" || (pprint "FAIL.\n" "cred"; exit 1)
 echo ">> INSTALLING REQUIREMENTS..."
 cd /JhonnyMusic
 pip3 install -U -r requirements.txt
-pip3 install nodejs
-
 echo ">> STARTING MUSIC PLAYER USERBOT..."
 clear
 echo "
